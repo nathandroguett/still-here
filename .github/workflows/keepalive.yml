@@ -1,0 +1,15 @@
+     name: Keep Supabase awake
+     on:
+       schedule:
+         - cron: "17 20 * * *"
+       workflow_dispatch: {}
+     jobs:
+       ping:
+         runs-on: ubuntu-latest
+         steps:
+           - run: |
+               curl -fsS -X POST \
+                 -H "apikey: sb_publishable_2YkE95Ou93iB8DM3sjXmBA_db95poEv" \
+                 -H "Authorization: Bearer sb_publishable_2YkE95Ou93iB8DM3sjXmBA_db95poEv" \
+                 -H "Content-Type: application/json" -d '{}' \
+                 https://polsfpnpvbeqnypcctjy.supabase.co/rest/v1/rpc/signup_count
