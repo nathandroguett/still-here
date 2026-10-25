@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--gate--><meta name="robots" content="noindex, nofollow"><script>(function(){var k="stillhere-preview",h="d4b04344a3beab38d613319c95d55f747cefb21a6674893e63a070454a0eba0d";try{if(localStorage.getItem(k)===h)return}catch(e){}var p=location.pathname.split("/").filter(Boolean),n=p.length?p[p.length-1]+"/":"";location.replace("../"+(n?"?next="+encodeURIComponent(n):""))})();</script><!--/gate-->
+<title>Chapter 29 · Still Here</title>
+<meta name="description" content="Still Here, Chapter 29: The Long Way Round.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Share+Tech+Mono&display=swap">
+<style>
+html,body{margin:0}
+
+/* Chapter page: same tokens as the landing page. A dark photo opener, then a
+   single reading column with photos breaking out of it at the moments they belong. */
+:root{
+  --paper:#f1f2f4;--paper-2:#e6e8ec;--ink:#161a22;--muted:#596170;--line:#c8cdd5;
+  --recliner:#a8232d;--recliner-ink:#ffffff;--stamp:#ff8a1f;
+  --night:#0d1017;--night-ink:#eef0f4;--night-muted:#a7aebb;--card:#ffffff;
+  --shadow:0 1px 2px rgba(16,20,28,.08),0 8px 24px rgba(16,20,28,.10);
+  --display:"Gloock","Georgia","Times New Roman",serif;
+  --body:"Newsreader","Georgia","Times New Roman",serif;
+  --mono:"Share Tech Mono","Courier New",ui-monospace,monospace;
+  --wrap:1180px;--read:38rem;--wide:56rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;--paper-2:#161a22;--ink:#e9ecf1;--muted:#9aa3b2;--line:#2b313c;
+    --recliner:#d8464f;--stamp:#ff9a3c;--card:#171b23;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;--paper-2:#161a22;--ink:#e9ecf1;--muted:#9aa3b2;--line:#2b313c;
+  --recliner:#d8464f;--stamp:#ff9a3c;--card:#171b23;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.1875rem;line-height:1.7;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.col{max-width:calc(var(--read) + 32px);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--mono);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+.stamp{font-family:var(--mono);color:var(--stamp);letter-spacing:.06em;text-shadow:0 0 6px rgba(255,138,31,.45)}
+:focus-visible{outline:3px solid var(--stamp);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--body);font-size:1.05rem;font-weight:500;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1px solid transparent;cursor:pointer;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-red{background:var(--recliner);color:var(--recliner-ink)}
+.btn svg{width:18px;height:18px}
+
+/* top bar + reading progress */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(13,16,23,.9);backdrop-filter:blur(8px);color:var(--night-ink)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.wordmark{font-family:var(--display);font-size:1.35rem;text-decoration:none}
+.topnav{display:flex;align-items:center;gap:clamp(12px,3vw,28px);font-size:.98rem}
+.topnav a{text-decoration:none;color:var(--night-muted)}
+.topnav a:hover{color:var(--night-ink)}
+.topnav .support{display:inline-flex;align-items:center;gap:6px;color:var(--night-ink);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:.35rem .8rem}
+.topnav .support svg{width:15px;height:15px;color:var(--recliner)}
+@media (max-width:560px){.topnav .hide-sm{display:none}}
+.progress{display:flex;align-items:center;gap:12px;padding:0 max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--night-muted);max-width:var(--wrap);margin-inline:auto}
+.progress .bar{flex:1;height:3px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden}
+.progress .fill{height:100%;width:0;background:var(--recliner)}
+.progress .yr{color:var(--stamp)}
+
+/* opener */
+.opener{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;background:var(--night);color:var(--night-ink);overflow:hidden;isolation:isolate}
+.opener img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;z-index:-2}
+.opener::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(13,16,23,.96) 0%,rgba(13,16,23,.7) 38%,rgba(13,16,23,.25) 100%)}
+.opener .wrap{width:100%;padding-block:clamp(56px,10vw,110px) clamp(40px,7vw,72px)}
+.opener .eyebrow{color:var(--night-muted)}
+.opener h1{font-size:clamp(3rem,9vw,7rem);margin-top:.3em;max-width:12ch;letter-spacing:-.01em}
+.opener .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:1.4rem;font-size:1rem;color:var(--night-muted)}
+.opener .meta .stamp{font-size:1.05rem}
+.opener .credit{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:14px;font-size:.85rem;color:var(--night-muted)}
+
+/* the story */
+.story{padding-block:clamp(56px,8vw,96px) clamp(40px,6vw,72px)}
+.story p{margin-top:1.15em;text-wrap:pretty}
+.story p:first-child{margin-top:0}
+.story .lede::first-letter{font-family:var(--display);float:left;font-size:4.4em;line-height:.86;padding:.06em .1em 0 0;color:var(--recliner)}
+.pull{margin:1.8em 0 1.6em 1.3rem;padding-left:1.2rem;border-left:3px solid var(--recliner)}
+.pull p{margin:0!important;font-style:italic;font-size:1.32rem;line-height:1.5}
+.pull.big{margin:2.6em 0;padding:0;border:0}
+.pull.big p{font-family:var(--display);font-style:normal;font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.2;color:var(--recliner)}
+
+/* photo moments */
+.ph{margin:0;min-width:0}
+.zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;position:relative;color:inherit}
+.ph img{width:100%;height:100%;object-fit:cover;border-radius:3px;background:var(--paper-2)}
+.ph figcaption{font-size:.95rem;line-height:1.4;color:var(--muted);margin-top:8px}
+.ph .stamp{position:absolute;right:10px;bottom:8px;font-size:1rem}
+.duo,.wide,.solo,.scatter{margin:2.4em 0}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.duo .zoom{aspect-ratio:4/5}
+.duo.land .zoom{aspect-ratio:4/3}
+[hidden]{display:none!important}
+.wide .zoom{aspect-ratio:3/2}
+.solo{max-width:24rem}
+.solo .zoom{aspect-ratio:4/3}
+@media (min-width:900px){
+  .wide,.duo{margin-inline:calc((var(--read) - var(--wide))/2)}
+}
+.scatter{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px;padding:10px 0}
+.scatter .ph{background:var(--card);padding:8px 8px 12px;box-shadow:var(--shadow);border-radius:3px;transition:transform .2s ease}
+.scatter .ph:hover{transform:rotate(0) translateY(-3px)!important}
+.scatter .zoom{aspect-ratio:1/1}
+.scatter .ph img{border-radius:1px}
+.scatter figcaption{color:var(--ink);font-size:.9rem;margin-top:8px}
+.scatter .t1{transform:rotate(-2deg)}.scatter .t2{transform:rotate(1.5deg)}.scatter .t3{transform:rotate(-.8deg)}
+.scatter .t4{transform:rotate(1.2deg)}.scatter .t5{transform:rotate(-1.4deg)}.scatter .t6{transform:rotate(.7deg)}
+@media (min-width:900px){.scatter{margin-inline:calc((var(--read) - var(--wide))/2);gap:22px 18px}}
+@media (max-width:520px){.scatter{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.end-mark{display:flex;align-items:center;gap:14px;margin-top:3rem;color:var(--muted);font-family:var(--mono);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+.end-mark::before,.end-mark::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* album */
+.album{background:var(--paper-2);padding-block:clamp(56px,8vw,96px)}
+.album-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px}
+.album h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+.album-head p{color:var(--muted);max-width:34ch;font-size:1.05rem}
+.strip-ctl{display:flex;gap:8px}
+.strip-ctl button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.strip-ctl button svg{width:18px;height:18px}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(220px,26vw,300px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:28px max(16px,env(safe-area-inset-right,0px)) 28px max(16px,env(safe-area-inset-left,0px));margin-top:8px;scrollbar-width:thin;scroll-padding-inline:max(16px,env(safe-area-inset-left,0px))}
+@media (min-width:1212px){.strip{padding-left:calc((100vw - var(--wrap))/2 + 16px);scroll-padding-inline:calc((100vw - var(--wrap))/2 + 16px)}}
+.print{scroll-snap-align:start;background:var(--card);padding:10px 10px 16px;box-shadow:var(--shadow);border-radius:3px;margin:0;transform:rotate(var(--tilt,0deg));transition:transform .2s ease}
+.print:hover{transform:rotate(0) translateY(-3px)}
+.print .pph{display:block;aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
+.print img{width:100%;height:100%;object-fit:cover}
+.print figcaption{font-size:.98rem;line-height:1.4;margin-top:12px}
+
+/* support + next */
+.after{padding-block:clamp(56px,8vw,96px)}
+.after-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.panel{border:1px solid var(--line);border-radius:8px;padding:clamp(22px,3vw,36px);background:var(--card);min-width:0}
+.panel h3{font-size:clamp(1.6rem,2.6vw,2.1rem)}
+.panel > p{color:var(--muted);margin-top:.6rem;font-size:1.05rem}
+.field{display:flex;flex-direction:column;gap:6px;margin-top:14px}
+.field label{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input{font:inherit;font-size:1rem;padding:.75rem .9rem;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);width:100%}
+.panel .btn{margin-top:18px}
+.note{margin-top:14px;font-size:.92rem;color:var(--muted);min-height:1.4em}
+.amounts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.amounts button{font:500 1.05rem var(--body);padding:.7rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums}
+.amounts button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.monthly{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.98rem}
+.monthly input{width:18px;height:18px;accent-color:var(--recliner)}
+.next{background:var(--night);color:var(--night-ink);border-color:transparent;display:flex;flex-direction:column;text-decoration:none;position:relative;overflow:hidden;isolation:isolate}
+.next::after{content:"";position:absolute;inset:auto -10% -40% auto;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(168,35,45,.45),transparent 65%);z-index:-1}
+.next .eyebrow{color:var(--night-muted)}
+.next h3{margin-top:.5rem;font-size:clamp(2rem,3.4vw,2.8rem)}
+.next .when{margin-top:.6rem;color:var(--stamp)}
+.next .tease{margin-top:1.2rem;font-style:italic;font-size:1.25rem;line-height:1.45;color:var(--night-ink);max-width:30ch}
+.next .go{margin-top:auto;padding-top:1.6rem;display:inline-flex;align-items:center;gap:.6rem;font-weight:500}
+.next .go svg{width:20px;height:20px;transition:transform .15s ease}
+.next:hover .go svg{transform:translateX(4px)}
+.chap-dots{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:28px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.chap-dots span{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line)}
+.chap-dots a{text-decoration:none;color:inherit}
+.chap-dots a span:hover{border-color:var(--ink)}
+.chap-dots span.on{background:var(--recliner);border-color:var(--recliner);color:#fff}
+.chap-dots span.lock{border-style:dashed;opacity:.6}
+@media (max-width:820px){.after-grid{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--night);color:var(--night-muted)}
+footer .wrap{padding-block:48px 40px;display:grid;gap:24px}
+footer .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:end}
+footer .wordmark{color:var(--night-ink);font-size:2rem}
+footer nav{display:flex;flex-wrap:wrap;gap:10px 22px}
+footer nav a{text-decoration:none}
+footer nav a:hover{color:var(--night-ink)}
+footer .care{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:.95rem;max-width:60ch}
+footer small{font-size:.85rem}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:92vh;color:#fff}
+dialog.lb::backdrop{background:rgba(8,10,14,.9)}
+dialog.lb img{max-width:100%;max-height:82vh;margin-inline:auto;border-radius:3px}
+dialog.lb p{text-align:center;margin-top:10px;font-size:1rem}
+dialog.lb button{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:999px;font:500 .95rem var(--body);padding:.45rem .9rem;cursor:pointer}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* poem + listen */
+.poem{margin:2.8em 0;padding:clamp(24px,4vw,40px);background:var(--card);border:1px solid var(--line);border-left:4px solid var(--recliner);border-radius:4px}
+.poem h2{font-size:clamp(1.6rem,3.2vw,2.1rem)}
+.poem .by{font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;color:var(--muted);margin-top:.6rem!important}
+.poem p:not(.by){font-style:italic;font-size:1.08rem;line-height:1.6;margin-top:1.1em}
+.solo.tall{max-width:17rem}
+.solo.tall .zoom{aspect-ratio:2/3}
+.listen{margin:2.6em 0;background:var(--night);color:var(--night-ink);border-radius:6px;overflow:hidden}
+.listen video{display:block;width:100%;aspect-ratio:4/3;background:#000}
+.listen .cap{padding:16px 18px 18px}
+.listen audio{display:block;width:calc(100% - 36px);margin:18px 18px 0}
+.listen.audio .cap{padding-top:12px}
+.listen .cap .eyebrow{color:var(--stamp)}
+.listen .cap p{margin-top:.4rem!important;font-size:1rem;color:var(--night-muted)}
+@media (min-width:900px){.listen{margin-inline:calc((var(--read) - var(--wide))/2)}}
+/*chnav*/
+.chnav{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-top:1.6rem}
+.chnav a,.chnav button{font:inherit;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px;min-width:0;min-height:44px}
+.chnav .prev,.chnav .nxt{padding:10px 4px}
+.chnav .nxt{justify-content:flex-end;text-align:right}
+.chnav svg{width:18px;height:18px;flex:none}
+.chnav .lbl{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.chnav .k{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.chnav .t{font-family:var(--display);font-size:1.12rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chnav a:hover .t{color:var(--recliner)}
+.chnav .skip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.55rem 1.05rem;cursor:pointer;font-size:.98rem;white-space:nowrap}
+.chnav .skip:hover{border-color:var(--ink)}
+@media (max-width:560px){.chnav .t,.chnav .cn{display:none}.chnav .k{font-size:.85rem;color:var(--ink)}}
+dialog.chlist{border:1px solid var(--line);border-radius:10px;padding:0;width:min(34rem,calc(100vw - 32px));max-height:min(80vh,44rem);background:var(--card);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog.chlist::backdrop{background:rgba(8,10,14,.6)}
+.chlist .hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--card)}
+.chlist h2{font-family:var(--display);font-weight:400;font-size:1.6rem;margin:0}
+.chlist .x{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:1.3rem;line-height:1}
+.chlist ol{list-style:none;margin:0;padding:8px 8px 14px}
+.chlist li a{display:grid;grid-template-columns:2.4rem minmax(0,1fr) auto;gap:4px 10px;align-items:baseline;padding:9px 12px;border-radius:6px;text-decoration:none;color:inherit}
+.chlist li a:hover{background:var(--paper-2)}
+.chlist .n{font-family:var(--mono);color:var(--muted);font-size:.9rem}
+.chlist .tt{font-family:var(--display);font-size:1.12rem;line-height:1.25}
+.chlist .d{font-family:var(--mono);font-size:.76rem;color:var(--muted);white-space:nowrap}
+.chlist a[aria-current="page"]{background:var(--paper-2)}
+.chlist a[aria-current="page"] .n{color:var(--recliner)}
+.chlist a[aria-current="page"] .tt::after{content:" · You're here";font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--recliner)}
+@media (max-width:560px){.chlist li a{grid-template-columns:2.2rem minmax(0,1fr)}.chlist .d{grid-column:2}}
+/*/chnav*/</style>
+<!--shcss--><style>
+.sh-lock{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:clamp(22px,4vw,40px);box-shadow:var(--shadow)}
+.sh-lock[hidden],.sh-lock [hidden]{display:none!important}
+.sh-lock h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-top:.5rem}
+.sh-lock h3{font-size:1.45rem}
+.sh-lock .eyebrow{color:var(--recliner)}
+.sh-lock p{margin-top:.8em;color:var(--muted);font-size:1.05rem}
+.sh-lock p strong{color:var(--ink);font-weight:500}
+.sh-lock .btn{margin-top:1.3rem}
+.sh-lock .btn svg{width:18px;height:18px}
+.sh-lock .btn-ghost{border-color:currentColor;background:transparent;color:var(--ink)}
+.sh-have{margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.sh-have form{max-width:26rem}
+.sh-have .btn{margin-top:14px}
+.sh-lock .note{margin-top:12px;font-size:.92rem;color:var(--muted);min-height:1.4em}
+.sh-link{font:inherit;font-size:1rem;color:var(--recliner);background:none;border:0;padding:0;margin-top:.8rem;text-decoration:underline;cursor:pointer}
+.sh-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.sh-loading{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+.sh-loading::before{content:"";width:16px;height:16px;border-radius:50%;border:2px solid var(--line);border-top-color:var(--recliner);animation:shspin .8s linear infinite}
+@keyframes shspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sh-loading::before{animation:none}}
+.sh-signed{margin-top:.9rem;text-align:center;color:var(--muted);font-size:.92rem}
+.sh-signed button{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+.note.sh-thanks{color:var(--recliner);font-weight:500}
+</style><!--/shcss-->
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="../home/">Still Here</a>
+    <nav class="topnav" aria-label="Main">
+      <a href="../home/" data-chlist>Chapters</a>
+      <a class="hide-sm" href="#album">Photos</a>
+      <a class="support" href="#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.6 2.9 5 6.5 5c2 0 3.6 1.1 4.5 2.6C11.9 6.1 13.5 5 15.5 5c3.6 0 5.6 3.6 4.1 6.8C19.5 16.4 12 21 12 21z"/></svg>Support</a>
+    </nav>
+  </div>
+  <div class="progress" aria-hidden="true">
+    <span>Ch 29 of 34</span>
+    <span class="bar"><span class="fill" id="fill"></span></span>
+    <span class="yr">2015</span>
+    <span id="left">5 min left</span>
+  </div>
+</header>
+
+<main>
+  <section class="opener" aria-labelledby="chTitle">
+    <img src="assets/ch29-75-800.webp" srcset="assets/ch29-75-800.webp 800w, assets/ch29-75.webp 1400w" sizes="100vw" alt="" style="object-position:50% 40%">
+    <div class="wrap">
+      <p class="eyebrow">Chapter 29 &nbsp;·&nbsp; Full book</p>
+      <h1 id="chTitle">The Long Way Round</h1>
+      <p class="meta"><span class="stamp">'15 6</span><span>Early–Mid 2015 · Sydney and Europe</span><span>5 minute read</span></p>
+    </div>
+    <span class="credit">Paris, the last leg</span>
+  </section>
+
+  <article class="story" id="story">
+    <div class="col">
+<!--locked--><div class="sh-lock" id="shLock" data-ch="29">
+  <div id="sh-buy">
+    <p class="eyebrow">Chapter 29 &nbsp;·&nbsp; Full book</p>
+    <h2>The rest of the story is in the full book</h2>
+    <p>Chapters 1 to 10 are free. The other 24, with every photo and video, come with the full book. It's AU$9.99, paid once, and it's yours on your phone, your laptop, wherever you like to read.</p>
+    <a class="btn btn-red" data-buy href="../unlock/">Unlock all 34 chapters · AU$9.99 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="sh-have">
+      <h3>Already bought it?</h3>
+      <p>Pop in the email you used at checkout and I'll send you a sign-in link. Tap it and this chapter opens, on this device or any other.</p>
+      <form id="sh-form" novalidate>
+        <div class="field"><label for="sh-email">Email</label><input id="sh-email" type="email" autocomplete="email" inputmode="email" required></div>
+        <button class="btn btn-ghost" type="submit">Send my sign-in link</button>
+        <p class="note" id="sh-note" role="status"></p>
+      </form>
+      <div id="sh-sent" hidden role="status">
+        <p><strong>Link sent to <span id="sh-sent-to"></span>.</strong> Check your inbox for an email from Still Here. It can take a minute, and now and then it lands in junk. Tap the link and you're in.</p>
+        <button type="button" class="sh-link" id="sh-again">Use a different email</button>
+      </div>
+    </div>
+  </div>
+  <div id="sh-wait" hidden><p class="sh-loading" role="status">Opening Chapter 29</p></div>
+  <div id="sh-nope" hidden>
+    <p class="eyebrow">Chapter 29 &nbsp;·&nbsp; Full book</p>
+    <h2>Nearly there</h2>
+    <p>You're signed in as <strong id="sh-who"></strong>, but I can't find the full book under that email yet. If you've only just paid, give it a minute and check again.</p>
+    <p>Used a different email at checkout? Sign out, then sign in with that one.</p>
+    <div class="sh-row">
+      <button class="btn btn-red" type="button" data-retry>Check again</button>
+      <a class="btn btn-ghost" id="sh-buy2" data-buy href="../unlock/">Get the full book · AU$9.99</a>
+    </div>
+    <button type="button" class="sh-link" data-signout>Sign out</button>
+  </div>
+  <div id="sh-err" hidden>
+    <h2>That didn't load</h2>
+    <p>Something went wrong opening this chapter. Check your connection and try again.</p>
+    <button class="btn btn-red" type="button" data-retry>Try again</button>
+  </div>
+  <noscript><p>This chapter needs JavaScript switched on to open.</p></noscript>
+</div><!--/locked-->
+      <p class="end-mark">End of chapter 29</p>
+      <!--chnav--><nav class="chnav" aria-label="Chapter navigation"><a class="prev" href="../chapter-28/"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="lbl"><span class="k">Back<span class="cn"> · Ch 28</span></span><span class="t">At the End of the Aisle</span></span></a><button class="skip" type="button" data-chlist><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>Skip to</button><a class="nxt" href="../chapter-30/"><span class="lbl"><span class="k">Next<span class="cn"> · Ch 30</span></span><span class="t">The Best News</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></svg></a></nav><!--/chnav-->
+      
+      
+    </div>
+  </article>
+
+  <section class="album" id="album" aria-labelledby="albumTitle">
+    <div class="wrap album-head">
+      <div>
+        <p class="eyebrow" style="color:var(--muted)">From this chapter</p>
+        <h2 id="albumTitle">More from 2015</h2>
+      </div>
+      <div class="strip-ctl">
+        <button type="button" id="prevBtn" aria-label="Previous photos"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M15 6l-6 6 6 6"/></svg></button>
+        <button type="button" id="nextBtn" aria-label="Next photos"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="strip" id="strip">
+<figure class="print" style="--tilt:-1.5deg"><button class="zoom" type="button" data-full="assets/ch29-34.webp" data-cap="The coast at Bagnara."><span class="pph"><img src="assets/ch29-34-800.webp" srcset="assets/ch29-34-800.webp 800w, assets/ch29-34.webp 1400w" sizes="320px" alt="The coast at Bagnara." loading="lazy"></span></button><figcaption>The coast at Bagnara.</figcaption></figure>
+<figure class="print" style="--tilt:1deg"><button class="zoom" type="button" data-full="assets/ch29-38.webp" data-cap="On the boat."><span class="pph"><img src="assets/ch29-38-800.webp" srcset="assets/ch29-38-800.webp 800w, assets/ch29-38.webp 1400w" sizes="320px" alt="On the boat." loading="lazy"></span></button><figcaption>On the boat.</figcaption></figure>
+<figure class="print" style="--tilt:-.6deg"><button class="zoom" type="button" data-full="assets/ch29-46.webp" data-cap="Venice."><span class="pph"><img src="assets/ch29-46-800.webp" srcset="assets/ch29-46-800.webp 800w, assets/ch29-46.webp 1400w" sizes="320px" alt="Venice." loading="lazy"></span></button><figcaption>Venice.</figcaption></figure>
+<figure class="print" style="--tilt:1.4deg"><button class="zoom" type="button" data-full="assets/ch29-47.webp" data-cap="A kiss by the canal."><span class="pph"><img src="assets/ch29-47-800.webp" srcset="assets/ch29-47-800.webp 800w, assets/ch29-47.webp 1400w" sizes="320px" alt="A kiss by the canal." loading="lazy"></span></button><figcaption>A kiss by the canal.</figcaption></figure>
+<figure class="print" style="--tilt:-1deg"><button class="zoom" type="button" data-full="assets/ch29-57.webp" data-cap="A beach in Greece."><span class="pph"><img src="assets/ch29-57-800.webp" srcset="assets/ch29-57-800.webp 800w, assets/ch29-57.webp 1400w" sizes="320px" alt="A beach in Greece." loading="lazy"></span></button><figcaption>A beach in Greece.</figcaption></figure>
+<figure class="print" style="--tilt:.8deg"><button class="zoom" type="button" data-full="assets/ch29-52.webp" data-cap="They call me sexy. Apparently."><span class="pph"><img src="assets/ch29-52-800.webp" srcset="assets/ch29-52-800.webp 800w, assets/ch29-52.webp 1400w" sizes="320px" alt="They call me sexy. Apparently." loading="lazy"></span></button><figcaption>They call me sexy. Apparently.</figcaption></figure>
+<figure class="print" style="--tilt:-1.2deg"><button class="zoom" type="button" data-full="assets/ch29-59.webp" data-cap="The London Eye."><span class="pph"><img src="assets/ch29-59-800.webp" srcset="assets/ch29-59-800.webp 800w, assets/ch29-59.webp 1400w" sizes="320px" alt="The London Eye." loading="lazy"></span></button><figcaption>The London Eye.</figcaption></figure>
+<figure class="print" style="--tilt:1.1deg"><button class="zoom" type="button" data-full="assets/ch29-60.webp" data-cap="Big Ben."><span class="pph"><img src="assets/ch29-60-800.webp" srcset="assets/ch29-60-800.webp 800w, assets/ch29-60.webp 1400w" sizes="320px" alt="Big Ben." loading="lazy"></span></button><figcaption>Big Ben.</figcaption></figure>
+<figure class="print" style="--tilt:-1.5deg"><button class="zoom" type="button" data-full="assets/ch29-62.webp" data-cap="Tower Bridge."><span class="pph"><img src="assets/ch29-62-800.webp" srcset="assets/ch29-62-800.webp 800w, assets/ch29-62.webp 1400w" sizes="320px" alt="Tower Bridge." loading="lazy"></span></button><figcaption>Tower Bridge.</figcaption></figure>
+<figure class="print" style="--tilt:1deg"><button class="zoom" type="button" data-full="assets/ch29-67.webp" data-cap="The Arc de Triomphe."><span class="pph"><img src="assets/ch29-67-800.webp" srcset="assets/ch29-67-800.webp 800w, assets/ch29-67.webp 1400w" sizes="320px" alt="The Arc de Triomphe." loading="lazy"></span></button><figcaption>The Arc de Triomphe.</figcaption></figure>
+<figure class="print" style="--tilt:-.6deg"><button class="zoom" type="button" data-full="assets/ch29-68.webp" data-cap="The Moulin Rouge."><span class="pph"><img src="assets/ch29-68-800.webp" srcset="assets/ch29-68-800.webp 800w, assets/ch29-68.webp 1400w" sizes="320px" alt="The Moulin Rouge." loading="lazy"></span></button><figcaption>The Moulin Rouge.</figcaption></figure>
+<figure class="print" style="--tilt:1.4deg"><button class="zoom" type="button" data-full="assets/ch29-69.webp" data-cap="The Louvre."><span class="pph"><img src="assets/ch29-69-800.webp" srcset="assets/ch29-69-800.webp 800w, assets/ch29-69.webp 1400w" sizes="320px" alt="The Louvre." loading="lazy"></span></button><figcaption>The Louvre.</figcaption></figure>
+<figure class="print" style="--tilt:-1deg"><button class="zoom" type="button" data-full="assets/ch29-80.webp" data-cap="The upgrade."><span class="pph"><img src="assets/ch29-80-800.webp" srcset="assets/ch29-80-800.webp 800w, assets/ch29-80.webp 1400w" sizes="320px" alt="The upgrade." loading="lazy"></span></button><figcaption>The upgrade.</figcaption></figure>
+<figure class="print" style="--tilt:.8deg"><button class="zoom" type="button" data-full="assets/ch29-13.webp" data-cap="My 28th."><span class="pph"><img src="assets/ch29-13-800.webp" srcset="assets/ch29-13-800.webp 800w, assets/ch29-13.webp 1400w" sizes="320px" alt="My 28th." loading="lazy"></span></button><figcaption>My 28th.</figcaption></figure>
+<figure class="print" style="--tilt:-1.2deg"><button class="zoom" type="button" data-full="assets/ch29-16.webp" data-cap="Me and Abuelo, the Asado King."><span class="pph"><img src="assets/ch29-16-800.webp" srcset="assets/ch29-16-800.webp 800w, assets/ch29-16.webp 1400w" sizes="320px" alt="Me and Abuelo, the Asado King." loading="lazy"></span></button><figcaption>Me and Abuelo, the Asado King.</figcaption></figure>
+<figure class="print" style="--tilt:1.1deg"><button class="zoom" type="button" data-full="assets/ch29-17.webp" data-cap="Family, with Grandma."><span class="pph"><img src="assets/ch29-17-800.webp" srcset="assets/ch29-17-800.webp 800w, assets/ch29-17.webp 1400w" sizes="320px" alt="Family, with Grandma." loading="lazy"></span></button><figcaption>Family, with Grandma.</figcaption></figure>
+<figure class="print" style="--tilt:-1.5deg"><button class="zoom" type="button" data-full="assets/ch29-19.webp" data-cap="Our brand new car."><span class="pph"><img src="assets/ch29-19-800.webp" srcset="assets/ch29-19-800.webp 800w, assets/ch29-19.webp 1400w" sizes="320px" alt="Our brand new car." loading="lazy"></span></button><figcaption>Our brand new car.</figcaption></figure>
+<figure class="print" style="--tilt:1deg"><button class="zoom" type="button" data-full="assets/ch29-20.webp" data-cap="Toby and Tiffany."><span class="pph"><img src="assets/ch29-20-800.webp" srcset="assets/ch29-20-800.webp 800w, assets/ch29-20.webp 1400w" sizes="320px" alt="Toby and Tiffany." loading="lazy"></span></button><figcaption>Toby and Tiffany.</figcaption></figure>
+<figure class="print" style="--tilt:-.6deg"><button class="zoom" type="button" data-full="assets/ch29-06.webp" data-cap="Good company, 2015."><span class="pph"><img src="assets/ch29-06-800.webp" srcset="assets/ch29-06-800.webp 800w, assets/ch29-06.webp 1400w" sizes="320px" alt="Good company, 2015." loading="lazy"></span></button><figcaption>Good company, 2015.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="after" aria-label="Support and next chapter">
+    <div class="wrap after-grid">
+      <form class="panel" id="support" novalidate>
+        <h3>Support Still Here</h3>
+        <p>Thank you for reading this far. If the story means something to you, you can support it here. It helps me keep writing, and brings Lucia and me a little closer to a home of our own.</p>
+        <div class="amounts" role="group" aria-label="Amount">
+          <button type="button" aria-pressed="false" data-amt="5">$5</button>
+          <button type="button" aria-pressed="true" data-amt="10">$10</button>
+          <button type="button" aria-pressed="false" data-amt="25">$25</button>
+          <button type="button" aria-pressed="false" data-amt="other">Other</button>
+        </div>
+        <div class="field" id="otherField" hidden><label for="sp-other">Your amount (AU$)</label><input id="sp-other" inputmode="decimal" placeholder="15"></div>
+        <label class="monthly" for="sp-monthly"><input type="checkbox" id="sp-monthly"> Make it monthly</label>
+        <button class="btn btn-red" type="submit" id="sp-btn">Support with $10</button>
+        <p class="note" id="sp-note" role="status"></p>
+      </form>
+
+      <a class="panel next" href="../chapter-30/" id="nextCh">
+        <p class="eyebrow">Up next &nbsp;·&nbsp; Chapter 30</p>
+        <h3>The Best News</h3>
+        <p class="when stamp">Late 2015</p>
+        <p class="tease">“We landed back in Sydney at the end of July, jet-lagged and happy, and got on with life.”</p>
+        <span class="go">Keep reading <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+    <div class="wrap">
+      <div class="chap-dots" aria-label="Chapters near this one"><a href="../chapter-25/" aria-label="Chapter 25"><span>25</span></a><a href="../chapter-26/" aria-label="Chapter 26"><span>26</span></a><a href="../chapter-27/" aria-label="Chapter 27"><span>27</span></a><a href="../chapter-28/" aria-label="Chapter 28"><span>28</span></a><span class="on">29</span><a href="../chapter-30/" aria-label="Chapter 30"><span>30</span></a><a href="../chapter-31/" aria-label="Chapter 31"><span>31</span></a><a href="../chapter-32/" aria-label="Chapter 32"><span>32</span></a><a href="../chapter-33/" aria-label="Chapter 33"><span>33</span></a>&nbsp; <button type="button" data-chlist style="font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer">Chapter 29 of 34</button></div>
+    </div>
+  </section>
+
+
+<!--chlist--><dialog class="chlist" id="chList" aria-labelledby="chListTitle"><div class="hd"><h2 id="chListTitle">All chapters</h2><button class="x" type="button" data-close aria-label="Close">×</button></div><ol><li><a href="../chapter-01/"><span class="n">01</span><span class="tt">The High Before the Drop</span><span class="d">Early 2006</span></a></li><li><a href="../chapter-02/"><span class="n">02</span><span class="tt">Fortress Crumbles</span><span class="d">February 2006</span></a></li><li><a href="../chapter-03/"><span class="n">03</span><span class="tt">The Dive</span><span class="d">April–May 2006</span></a></li><li><a href="../chapter-04/"><span class="n">04</span><span class="tt">Before the Storm</span><span class="d">May 2006</span></a></li><li><a href="../chapter-05/"><span class="n">05</span><span class="tt">The Grind</span><span class="d">June 2006</span></a></li><li><a href="../chapter-06/"><span class="n">06</span><span class="tt">Words from the Ward</span><span class="d">June–July 2006</span></a></li><li><a href="../chapter-07/"><span class="n">07</span><span class="tt">The Extra Cycle</span><span class="d">July–August 2006</span></a></li><li><a href="../chapter-08/"><span class="n">08</span><span class="tt">Climbing from the Ashes</span><span class="d">Late 2006</span></a></li><li><a href="../chapter-09/"><span class="n">09</span><span class="tt">The Girl on MySpace</span><span class="d">October–December 2006</span></a></li><li><a href="../chapter-10/"><span class="n">10</span><span class="tt">Back in the Game</span><span class="d">January 2007</span></a></li><li><a href="../chapter-11/"><span class="n">11</span><span class="tt">Lost in Auckland</span><span class="d">February 2007</span></a></li><li><a href="../chapter-12/"><span class="n">12</span><span class="tt">Making It Official</span><span class="d">February–March 2007</span></a></li><li><a href="../chapter-13/"><span class="n">13</span><span class="tt">Steady on the Tracks</span><span class="d">April–December 2007</span></a></li><li><a href="../chapter-14/"><span class="n">14</span><span class="tt">New Roads, Old Ghosts</span><span class="d">Early–Mid 2008</span></a></li><li><a href="../chapter-15/"><span class="n">15</span><span class="tt">The Finish Line</span><span class="d">Late 2008</span></a></li><li><a href="../chapter-16/"><span class="n">16</span><span class="tt">Full Circle</span><span class="d">January 2009</span></a></li><li><a href="../chapter-17/"><span class="n">17</span><span class="tt">Roots and Wings</span><span class="d">2009</span></a></li><li><a href="../chapter-18/"><span class="n">18</span><span class="tt">Our Own Front Door</span><span class="d">2010</span></a></li><li><a href="../chapter-19/"><span class="n">19</span><span class="tt">Welcome to Lima</span><span class="d">2011</span></a></li><li><a href="../chapter-20/"><span class="n">20</span><span class="tt">Blaze Across Borders</span><span class="d">2011</span></a></li><li><a href="../chapter-21/"><span class="n">21</span><span class="tt">All In</span><span class="d">Mid–Late 2011</span></a></li><li><a href="../chapter-22/"><span class="n">22</span><span class="tt">The Question</span><span class="d">November 2011</span></a></li><li><a href="../chapter-23/"><span class="n">23</span><span class="tt">Coast to Coast</span><span class="d">2012</span></a></li><li><a href="../chapter-24/"><span class="n">24</span><span class="tt">Shadows Creep In</span><span class="d">2012–2013</span></a></li><li><a href="../chapter-25/"><span class="n">25</span><span class="tt">The Gift</span><span class="d">21 January 2014</span></a></li><li><a href="../chapter-26/"><span class="n">26</span><span class="tt">A New Normal</span><span class="d">January–February 2014</span></a></li><li><a href="../chapter-27/"><span class="n">27</span><span class="tt">Planning the Vows</span><span class="d">2014</span></a></li><li><a href="../chapter-28/"><span class="n">28</span><span class="tt">At the End of the Aisle</span><span class="d">December 2014</span></a></li><li><a href="../chapter-29/" aria-current="page"><span class="n">29</span><span class="tt">The Long Way Round</span><span class="d">Early–Mid 2015</span></a></li><li><a href="../chapter-30/"><span class="n">30</span><span class="tt">The Best News</span><span class="d">Late 2015</span></a></li><li><a href="../chapter-31/"><span class="n">31</span><span class="tt">Warning Signs</span><span class="d">Late 2015</span></a></li><li><a href="../chapter-32/"><span class="n">32</span><span class="tt">What the Scan Said</span><span class="d">January 2016</span></a></li><li><a href="../chapter-33/"><span class="n">33</span><span class="tt">The Hardest Call</span><span class="d">January 2016</span></a></li><li><a href="../chapter-34/"><span class="n">34</span><span class="tt">Carmelito</span><span class="d">26–27 January 2016</span></a></li></ol></dialog><!--/chlist-->
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <span class="wordmark">Still Here</span>
+      <nav aria-label="Footer">
+        <a href="../home/">Home</a>
+        <a href="#" data-chlist>Chapters</a>
+        <a href="../support/">Support</a>
+      </nav>
+    </div>
+    <p class="care">This story talks about cancer, serious illness and loss. If any of it touches your own life, the Support services page lists people who can help.</p>
+    <small>© 2026 Nathan Droguett. All photos are from the author's family collection.</small>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Photo">
+  <button type="button" id="lbClose">Close</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reading progress + minutes left
+  var story=document.getElementById('story'), fill=document.getElementById('fill'), left=document.getElementById('left'), total=5;
+  function prog(){
+    var r=story.getBoundingClientRect(), h=r.height-window.innerHeight*.6;
+    var p=Math.min(1,Math.max(0,(-r.top+window.innerHeight*.3)/Math.max(1,h)));
+    fill.style.width=(p*100).toFixed(1)+'%';
+    var m=Math.ceil(total*(1-p)); left.textContent=p>=.99?'Finished':(m<1?'Under a minute left':m+' min left');
+  }
+  window.addEventListener('scroll',prog,{passive:true}); window.addEventListener('resize',prog); prog();
+
+  // Lightbox
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+  [].forEach.call(document.querySelectorAll('.zoom'),function(b){
+    b.addEventListener('click',function(){
+      lbImg.src=b.getAttribute('data-full'); lbImg.alt=b.querySelector('img').alt; lbCap.textContent=b.getAttribute('data-cap');
+      if(lb.showModal) lb.showModal();
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click',function(){lb.close()});
+  lb.addEventListener('click',function(e){ if(e.target===lb) lb.close(); });
+
+  // Album arrows
+  var strip=document.getElementById('strip');
+  function step(dir){ var c=strip.querySelector('.print'); var w=c?c.getBoundingClientRect().width+20:280; strip.scrollBy({left:dir*w*2,behavior:reduce?'auto':'smooth'}); }
+  document.getElementById('prevBtn').addEventListener('click',function(){step(-1)});
+  document.getElementById('nextBtn').addEventListener('click',function(){step(1)});
+
+  // Next chapter (preview)
+  document.getElementById('nextCh').addEventListener('click',function(e){
+  });
+
+  // Support amounts (preview only: no payment is taken)
+  var btns=[].slice.call(document.querySelectorAll('.amounts button')), other=document.getElementById('otherField'),
+      otherIn=document.getElementById('sp-other'), spBtn=document.getElementById('sp-btn'), monthly=document.getElementById('sp-monthly'), amt='10';
+  function label(){
+    var a=amt==='other'?(otherIn.value.trim()||'your amount'):amt;
+    spBtn.textContent='Support with '+(/^\d+(\.\d{1,2})?$/.test(a)?'$'+a:a)+(monthly.checked?' a month':'');
+  }
+  btns.forEach(function(b){ b.addEventListener('click',function(){
+    amt=b.getAttribute('data-amt');
+    btns.forEach(function(x){ x.setAttribute('aria-pressed',x===b?'true':'false'); });
+    other.hidden=amt!=='other'; if(amt==='other') otherIn.focus(); label();
+  });});
+  otherIn.addEventListener('input',label); monthly.addEventListener('change',label);
+  document.getElementById('support').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('sp-note').textContent='Preview only: this will open secure checkout once payments are connected.';
+  });
+})();
+</script>
+<!--chjs--><script>
+(function(){
+  var d=document.getElementById('chList'); if(!d) return;
+  function open(e){ if(e) e.preventDefault();
+    if(typeof d.showModal==='function'){ d.showModal(); } else { d.setAttribute('open',''); }
+    var c=d.querySelector('[aria-current="page"]'); if(c){ c.scrollIntoView({block:'center'}); c.focus(); } }
+  function close(){ if(typeof d.close==='function') d.close(); else d.removeAttribute('open'); }
+  [].forEach.call(document.querySelectorAll('[data-chlist]'),function(b){ b.addEventListener('click',open); });
+  d.querySelector('[data-close]').addEventListener('click',close);
+  d.addEventListener('click',function(e){ if(e.target===d) close(); });
+})();
+</script><!--/chjs-->
+<!--access--><script src="../assets/stillhere-access.js" defer></script><!--/access-->
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Windows / Mac clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Never publish private or unused material
+_unused/
+*-UNREDACTED*
+
+# Editor and tool files
+*.psd
+*.tmp
+~$*
+
+# Half-finished image conversions
+*.part

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Still Here · Coming soon</title>
+<meta name="description" content="Still Here. A true story by Nathan Droguett. Sydney, 2006 to 2016. Coming soon.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Share+Tech+Mono&display=swap">
+<style>
+html,body{margin:0}
+
+/* Coming soon: one dark, quiet screen. The story's opening line, a few sentences, and a door
+   nobody notices: the full stop after "true" opens the early-access PIN. */
+:root{
+  --night:#0d1017;--ink:#eef0f4;--muted:#a7aebb;--line:rgba(255,255,255,.18);
+  --recliner:#a8232d;--recliner-hi:#d8464f;--stamp:#ff8a1f;--card:#141821;
+  --display:"Gloock","Georgia","Times New Roman",serif;
+  --body:"Newsreader","Georgia","Times New Roman",serif;
+  --mono:"Share Tech Mono","Courier New",ui-monospace,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){color-scheme:dark}}
+:root[data-theme="light"]{color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--night);color:var(--ink);font-family:var(--body);font-size:1.1rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.stage{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;overflow:hidden}
+.bg{position:absolute;inset:-4%;z-index:-2;background:#0d1017 url("assets/bg.webp") 45% 45%/cover no-repeat;animation:drift 40s ease-in-out infinite alternate;filter:saturate(.75)}
+@media (max-width:700px){.bg{background-image:url("assets/bg-sm.webp");background-position:50% 45%}}
+.stage::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(0deg,rgba(13,16,23,.97) 0%,rgba(13,16,23,.82) 34%,rgba(13,16,23,.45) 68%,rgba(13,16,23,.6) 100%),
+  radial-gradient(120% 80% at 85% 100%,rgba(168,35,45,.28),transparent 60%)}
+@keyframes drift{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-1.5%,-1%)}}
+.wrap{width:100%;max-width:1180px;margin-inline:auto;padding:clamp(28px,6vw,72px) max(20px,env(safe-area-inset-right,0px)) clamp(28px,5vw,56px) max(20px,env(safe-area-inset-left,0px))}
+.eyebrow{font-family:var(--mono);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(4rem,14vw,10rem);line-height:.95;letter-spacing:-.01em;margin:.25em 0 0}
+.by{margin:.6rem 0 0;color:var(--muted);font-size:1.15rem}
+.lead{font-style:italic;font-size:clamp(1.2rem,2.3vw,1.6rem);line-height:1.38;max-width:34ch;margin:1.8rem 0 0}
+.about{max-width:46ch;margin:1.2rem 0 0;color:#cfd3db;font-size:clamp(1.05rem,1.6vw,1.2rem)}
+.dot{all:unset;cursor:text;color:inherit}
+.dot:focus-visible{outline:1px dotted rgba(255,255,255,.35);outline-offset:2px}
+.soon{display:flex;align-items:center;gap:14px;margin-top:2.4rem;font-family:var(--mono);font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stamp)}
+.soon::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--stamp);box-shadow:0 0 0 0 rgba(255,138,31,.6);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,138,31,.55)}80%,100%{box-shadow:0 0 0 12px rgba(255,138,31,0)}}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:clamp(40px,7vw,80px);padding-top:18px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+
+/* early access */
+dialog{border:1px solid var(--line);border-radius:12px;padding:0;width:min(24rem,calc(100vw - 32px));background:var(--card);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+dialog::backdrop{background:rgba(6,8,12,.72);backdrop-filter:blur(4px)}
+.gate{padding:28px 26px 24px;text-align:center}
+.gate h2{font-family:var(--display);font-weight:400;font-size:1.9rem;margin:0}
+.gate p{margin:.4rem 0 0;color:var(--muted);font-size:1rem}
+.pin{display:block;width:100%;margin:22px 0 0;padding:.7rem .5rem .7rem 1.1rem;font:400 1.9rem var(--mono);letter-spacing:.55em;text-align:center;color:var(--ink);background:#0b0e14;border:1px solid var(--line);border-radius:8px;caret-color:var(--stamp)}
+.pin:focus{outline:none;border-color:var(--stamp)}
+.pin.bad{animation:shake .38s ease;border-color:var(--recliner-hi)}
+@keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+.msg{min-height:1.5em;margin-top:12px!important;font-size:.95rem!important}
+.msg.err{color:#ff9aa0}
+.msg.ok{color:var(--stamp)}
+.row{display:flex;gap:10px;margin-top:14px}
+.row button{flex:1;font:500 1rem var(--body);padding:.75rem 1rem;border-radius:999px;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink)}
+.row .go{background:var(--recliner);border-color:var(--recliner);color:#fff}
+.row button:disabled{opacity:.5;cursor:default}
+@media (prefers-reduced-motion:reduce){.bg,.soon::before{animation:none}.pin.bad{animation:none}}
+</style>
+</head>
+<body>
+<main class="stage">
+  <div class="bg" role="img" aria-label="Nathan and Lucia’s first dance, sparklers and a floor of cloud around them"></div>
+  <div class="wrap">
+    <p class="eyebrow">A true story &nbsp;·&nbsp; Sydney &nbsp;·&nbsp; 2006 to 2016</p>
+    <h1>Still Here</h1>
+    <p class="by">by Nathan Droguett</p>
+    <p class="lead">The thing about a rollercoaster is you never see the drop coming. You're coasting along the top, wind in your face, grinning like an idiot. And then the track disappears beneath you.</p>
+    <p class="about">At nineteen, I had cancer. A few months later, I met a girl on MySpace who had already died once, for a few minutes, when she was little. This is the next ten years of our lives. Thirty-four chapters, hundreds of real photos and videos, and every word of it true<button class="dot" type="button" id="door" aria-label="Early access">.</button></p>
+    <p class="soon">Coming soon</p>
+    <div class="foot"><span>© 2026 Nathan Droguett</span><span>Our first dance, December 2014</span></div>
+  </div>
+</main>
+
+<dialog id="gate" aria-labelledby="gateTitle">
+  <form class="gate" id="gateForm" method="dialog" novalidate>
+    <h2 id="gateTitle">Early access</h2>
+    <p>Enter your PIN to come in.</p>
+    <input class="pin" id="pin" type="password" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]*" aria-label="PIN" placeholder="······">
+    <p class="msg" id="msg" role="status"></p>
+    <div class="row">
+      <button type="button" id="cancel">Not now</button>
+      <button type="submit" class="go" id="enter">Enter</button>
+    </div>
+  </form>
+</dialog>
+
+<a id="homeLink" href="home/" hidden>Home</a>
+
+<script>
+(function(){
+  // SHA-256 of "still-here:" + PIN. Change the PIN with _Tools/preview_gate.py (it updates this line and every page).
+  var PIN_HASH='d4b04344a3beab38d613319c95d55f747cefb21a6674893e63a070454a0eba0d';
+  var KEY='stillhere-preview';
+  var d=document.getElementById('gate'), pin=document.getElementById('pin'), msg=document.getElementById('msg'),
+      enter=document.getElementById('enter'), tries=0, lockedUntil=0;
+
+  function store(){ try{ return window.localStorage; }catch(e){ return null; } }
+  function unlocked(){ var s=store(); try{ return !!s && s.getItem(KEY)===PIN_HASH; }catch(e){ return false; } }
+  function remember(){ var s=store(); try{ if(s) s.setItem(KEY,PIN_HASH); }catch(e){} }
+
+  function target(){
+    var home=document.getElementById('homeLink').getAttribute('href');
+    var m=/[?&]next=([^&]+)/.exec(location.search), next=m?decodeURIComponent(m[1]):'';
+    // Only same-site paths like "chapter-12/" are allowed, and only on the published site.
+    if(next && /^[a-z0-9-]+\/$/.test(next) && !/^https?:/.test(home)) return next;
+    return home;
+  }
+  function go(){
+    var a=document.getElementById('homeLink'); a.setAttribute('href',target()); a.click();
+  }
+  function open(){
+    if(unlocked()){ go(); return; }
+    msg.textContent=''; msg.className='msg'; pin.value='';
+    if(typeof d.showModal==='function') d.showModal(); else d.setAttribute('open','');
+    setTimeout(function(){ pin.focus(); },30);
+  }
+  function close(){ if(typeof d.close==='function') d.close(); else d.removeAttribute('open'); }
+
+  function sha(text){
+    if(!(window.crypto&&crypto.subtle)) return Promise.reject(new Error('no-crypto'));
+    return crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)).then(function(buf){
+      return Array.prototype.map.call(new Uint8Array(buf),function(b){ return ('0'+b.toString(16)).slice(-2); }).join('');
+    });
+  }
+  function fail(text){
+    msg.textContent=text; msg.className='msg err';
+    pin.classList.remove('bad'); void pin.offsetWidth; pin.classList.add('bad'); pin.select();
+  }
+  function check(){
+    var now=Date.now();
+    if(now<lockedUntil){ fail('Too many tries. Wait a moment.'); return; }
+    var v=pin.value.replace(/\D/g,'');
+    if(v.length<4){ fail('That\u2019s not it.'); return; }
+    enter.disabled=true;
+    sha('still-here:'+v).then(function(h){
+      enter.disabled=false;
+      if(h===PIN_HASH){
+        remember(); msg.textContent='Come in.'; msg.className='msg ok';
+        setTimeout(go,450);
+      } else {
+        tries++; if(tries>=5){ lockedUntil=Date.now()+30000; tries=0; fail('Too many tries. Wait 30 seconds.'); }
+        else fail('That\u2019s not it.');
+      }
+    },function(){ enter.disabled=false; fail('This browser can\u2019t check the PIN here.'); });
+  }
+
+  document.getElementById('door').addEventListener('click',open);
+  document.getElementById('cancel').addEventListener('click',close);
+  document.getElementById('gateForm').addEventListener('submit',function(e){ e.preventDefault(); check(); });
+  pin.addEventListener('input',function(){
+    pin.value=pin.value.replace(/\D/g,'').slice(0,6);
+    if(pin.value.length===6) check();
+  });
+  d.addEventListener('click',function(e){ if(e.target===d) close(); });
+})();
+</script>
+</body>
+</html>
