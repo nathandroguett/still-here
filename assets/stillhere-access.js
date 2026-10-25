@@ -342,7 +342,9 @@
       }).then(function (r) {
         if (r.error && r.error.code !== '23505') throw r.error;
         var thanks = name ? 'Thank you, ' + name + '. ' : 'Thank you. ';
-        note.textContent = r.error ? 'You’re already on the list. ' + thanks + 'I’ll be in touch.' : thanks + 'You’re on the list, and you’ll be the first to know.';
+        note.textContent = r.error
+          ? 'You’re already on the list. If you haven’t confirmed yet, look for an email from Still Here.'
+          : thanks + 'Nearly there: check your inbox and tap the link to confirm.';
         f.reset(); refreshCount();
       }).catch(function () {
         note.textContent = 'That didn’t save. Check your connection and try again.';
