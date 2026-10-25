@@ -28,8 +28,9 @@ html,body{margin:0}
 html,body{height:100%}
 body{margin:0;background:var(--night);color:var(--ink);font-family:var(--body);font-size:1.1rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .stage{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;overflow:hidden}
-.bg{position:absolute;inset:-4%;z-index:-2;background:#0d1017 url("assets/bg.webp") 45% 45%/cover no-repeat;animation:drift 40s ease-in-out infinite alternate;filter:saturate(.75)}
-@media (max-width:700px){.bg{background-image:url("assets/bg-sm.webp");background-position:50% 45%}}
+.bg{position:absolute;inset:-4%;z-index:-2;background:#0d1017 url("assets/bg.webp") right -18vw top 45%/cover no-repeat;animation:drift 40s ease-in-out infinite alternate;filter:saturate(.75)}
+@media (max-width:1200px){.bg{background-position:right -34vw top 45%}}
+@media (max-width:700px),(orientation:portrait){.bg{background-image:url("assets/bg-sm.webp");background-position:50% 45%}}
 .stage::after{content:"";position:absolute;inset:0;z-index:-1;background:
   linear-gradient(0deg,rgba(13,16,23,.97) 0%,rgba(13,16,23,.82) 34%,rgba(13,16,23,.45) 68%,rgba(13,16,23,.6) 100%),
   radial-gradient(120% 80% at 85% 100%,rgba(168,35,45,.28),transparent 60%)}
