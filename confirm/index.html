@@ -346,6 +346,7 @@ dialog.chlist::backdrop{background:rgba(8,10,14,.6)}
       <div id="cf-done" hidden><p class="eyebrow">The next book</p><h1>You're on the list</h1><p>Thank you. Truly. There's a short email from me on its way.</p><p>When 1,000 of you have signed up, I'll start writing, and you'll be the first to hear.</p><a class="btn btn-red" href="../home/">Back to Still Here</a></div>
       <div id="cf-already" hidden><p class="eyebrow">The next book</p><h1>You're already in</h1><p>You confirmed this one earlier, so there's nothing else to do. Thank you for wanting more.</p><a class="btn btn-red" href="../home/">Back to Still Here</a></div>
       <div id="cf-gone" hidden><p class="eyebrow">The next book</p><h1>That link has expired</h1><p>Sign-ups that aren't confirmed within 30 days are cleared out. Pop your email in again on the home page and I'll send a fresh link.</p><a class="btn btn-red" href="../home/#signup">Sign up again</a></div>
+      <div id="cf-err" hidden><p class="eyebrow">The next book</p><h1>Something went wrong on my end</h1><p>Your link is fine. Give it a minute, then tap the button in the email again.</p></div>
       <div id="cf-bad" hidden><p class="eyebrow">The next book</p><h1>That link didn't work</h1><p>It may be incomplete, or it might have been split across two lines. Try tapping the button in the email again.</p></div>
       <noscript><p>This page needs JavaScript switched on.</p></noscript>
     </div></div>
@@ -383,11 +384,11 @@ dialog.chlist::backdrop{background:rgba(8,10,14,.6)}
 <script>
 (function(){
   var q=new URLSearchParams(location.search),u=q.get('u'),t=q.get('t');
-  function show(id){['cf-wait','cf-done','cf-already','cf-gone','cf-bad'].forEach(function(x){document.getElementById(x).hidden=x!==id;});}
+  function show(id){['cf-wait','cf-done','cf-already','cf-gone','cf-err','cf-bad'].forEach(function(x){document.getElementById(x).hidden=x!==id;});}
   if(!u||!t){show('cf-bad');return;}
   fetch('https://polsfpnpvbeqnypcctjy.supabase.co/functions/v1/next-book',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'confirm',u:u,t:t})})
     .then(function(r){return r.json().catch(function(){return {};}).then(function(d){
-      if(r.ok&&d.already) show('cf-already'); else if(r.ok) show('cf-done'); else if(r.status===404) show('cf-gone'); else show('cf-bad');
+      if(r.ok&&d.already) show('cf-already'); else if(r.ok) show('cf-done'); else if(r.status===404) show('cf-gone'); else if(r.status>=500) show('cf-err'); else show('cf-bad');
     });},function(){show('cf-bad');});
 })();
 </script>
