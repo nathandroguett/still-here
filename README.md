@@ -73,6 +73,7 @@ If a page is re-exported from the Claude previews, run these from the `Still Her
 python3 _Tools/export_for_github.py   # turns preview links into relative links
 python3 _Tools/optimize_images.py     # makes WebP photos, moves the original JPEGs to _Website-jpg
 python3 _Tools/protect_chapters.py    # moves Chapter 11 to 34 text into _Private (then upload it to Supabase)
+python3 _Tools/share_tags.py          # link previews for WhatsApp, Messenger, Facebook and friends
 python3 _Tools/preview_gate.py on     # re-applies the testing lock
 python3 _Tools/check_links.py         # checks every link, photo and video
 ```
