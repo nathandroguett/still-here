@@ -189,6 +189,12 @@ dialog.lb p{text-align:center;margin-top:10px;font-size:1rem}
 dialog.lb button{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:999px;font:500 .95rem var(--body);padding:.45rem .9rem;cursor:pointer}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.listen{margin:2.6em 0;background:var(--night);color:var(--night-ink);border-radius:6px;overflow:hidden}
+.listen video{display:block;width:100%;aspect-ratio:4/3;background:#000}
+.listen .cap{padding:16px 18px 18px}
+.listen .cap .eyebrow{color:var(--stamp)}
+.listen .cap p{margin-top:.4rem!important;font-size:1rem;color:var(--night-muted)}
+@media (min-width:900px){.listen{margin-inline:calc((var(--read) - var(--wide))/2)}}
 /*chnav*/
 .chnav{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-top:1.6rem}
 .chnav a,.chnav button{font:inherit;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px;min-width:0;min-height:44px}
