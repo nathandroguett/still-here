@@ -231,7 +231,7 @@
       e.preventDefault(); e.stopImmediatePropagation(); e.stopPropagation();
       var a = amount(), m = monthly && monthly.checked, url;
       if (a === 'other') {
-        if (m) { note.textContent = 'Monthly support comes in $5, $10, $25 or $50. Pick one of those, or untick monthly to give any amount.'; return; }
+        if (m) { note.textContent = 'Monthly support comes in $5, $10, $25 or $50. Pick one of those, or untick monthly to choose any amount.'; return; }
         url = L.any;
       } else {
         url = (m ? L.monthly : L.once)[a];
