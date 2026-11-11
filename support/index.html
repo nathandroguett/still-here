@@ -306,7 +306,28 @@ dialog.chlist::backdrop{background:rgba(8,10,14,.6)}
 .chlist a[aria-current="page"] .n{color:var(--recliner)}
 .chlist a[aria-current="page"] .tt::after{content:" · You're here";font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--recliner)}
 @media (max-width:560px){.chlist li a{grid-template-columns:2.2rem minmax(0,1fr)}.chlist .d{grid-column:2}}
-/*/chnav*/</style>
+/*/chnav*/
+.next{background:var(--paper-2,#e9ecf1);padding-block:clamp(64px,9vw,112px);border-block:1px solid var(--line)}
+.next .eyebrow{color:var(--recliner)}
+.next h2{font-size:var(--step-3);max-width:22ch;margin-top:.6rem}
+.next-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,64px);align-items:start;margin-top:clamp(24px,4vw,40px)}
+.next-text p{font-size:1.15rem;line-height:1.7;margin-top:1.1em}
+.next-text p:first-child{margin-top:0}
+.next-text .big{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.25;color:var(--ink)}
+.book2{margin-top:2rem;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--recliner);border-radius:8px;padding:clamp(20px,3vw,28px);box-shadow:var(--shadow)}
+.book2 .eyebrow{color:var(--muted)}
+.book2 h3{font-family:var(--display);font-size:clamp(1.5rem,3vw,1.9rem);margin-top:.4rem}
+.book2 ul{margin:1rem 0 0;padding-left:1.2rem}
+.book2 li{margin-top:.5rem;font-size:1.08rem;line-height:1.55}
+.book2 .btn{margin-top:1.4rem}
+.next-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.next-photos figure{margin:0}
+.next-photos .lead{grid-column:1/-1}
+.next-photos img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;border-radius:4px;box-shadow:var(--shadow)}
+.next-photos .lead img{aspect-ratio:3/2;object-position:50% 35%}
+.next-photos figcaption{font-size:.92rem;color:var(--muted);margin-top:6px}
+@media (max-width:820px){.next-grid{grid-template-columns:1fr}}
+</style>
 <!--shcss--><style>
 .sh-lock{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:clamp(22px,4vw,40px);box-shadow:var(--shadow)}
 .sh-lock[hidden],.sh-lock [hidden]{display:none!important}
@@ -376,6 +397,38 @@ dialog.chlist::backdrop{background:rgba(8,10,14,.6)}
     </div></div>
   </section>
 
+  <section class="next" id="next" aria-labelledby="nextTitle">
+    <div class="wrap">
+      <p class="eyebrow">Where your support goes</p>
+      <h2 id="nextTitle">The book ends in 2016. Our story doesn’t.</h2>
+      <div class="next-grid">
+        <div class="next-text">
+          <p>Still Here brought us to the start of 2016. So many wonderful things have happened since then.</p>
+          <p class="big">It’s 2026 now. Lucia and I are still here, still together, and still going strong. And Carmelito is now a big brother to three beautiful children.</p>
+          <p>Don’t get me wrong, there have still been some very hard times. But the highs have been even higher.</p>
+          <p>I would love to write a second book. If Still Here does well, I’ll get started.</p>
+          <div class="book2">
+            <p class="eyebrow">Book two · working title</p>
+            <h3>Still Here, Still Riding</h3>
+            <ul>
+              <li>Life after Carmelito: how we picked up the pieces and slowly found our way back to normal</li>
+              <li>The birth of our three children, their prematurity, and the long hospital stays that came with it</li>
+              <li>A career change that actually worked</li>
+              <li>COVID</li>
+              <li>The loss of loved ones, including some of the people this book was built around</li>
+            </ul>
+            <a class="btn btn-red" href="#give">Help me write it</a>
+          </div>
+        </div>
+        <div class="next-photos">
+          <figure class="lead"><img src="assets/now-us-800.webp" srcset="assets/now-us-800.webp 800w, assets/now-us.webp 1400w" sizes="(min-width: 820px) 40vw, 100vw" alt="Nathan and Lucia today, smiling together in a garden courtyard" loading="lazy"><figcaption>Us, ten years on.</figcaption></figure>
+          <figure><img src="assets/now-kids-800.webp" srcset="assets/now-kids-800.webp 800w, assets/now-kids.webp 1400w" sizes="(min-width: 820px) 20vw, 50vw" alt="Carmelito’s two little sisters and little brother sitting together on a staircase, smiling" loading="lazy"><figcaption>Carmelito’s little sisters and brother.</figcaption></figure>
+          <figure><img src="assets/now-beach-800.webp" srcset="assets/now-beach-800.webp 800w, assets/now-beach.webp 1078w" sizes="(min-width: 820px) 20vw, 50vw" alt="Nathan, Lucia and their three children in the water at the beach" loading="lazy"><figcaption>Still going strong.</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="give" id="give" aria-label="Give">
     <div class="wrap give-grid">
       <form class="panel" id="support" novalidate>
@@ -398,7 +451,7 @@ dialog.chlist::backdrop{background:rgba(8,10,14,.6)}
         <h2>Where it goes</h2>
         <div class="item">
           <h3>Time to keep writing</h3>
-          <p>This book ends in 2016. The story doesn't. Your support buys me more hours at the keyboard for the next one.</p>
+          <p>This book ends in 2016. The story doesn't. Your support buys me more hours at the keyboard for <a href="#next">book two</a>.</p>
         </div>
         <div class="item">
           <h3>Keeping it online</h3>
