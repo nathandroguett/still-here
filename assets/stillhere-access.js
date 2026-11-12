@@ -15,7 +15,7 @@
   var SUPABASE_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb4Hiy3Ok';
   var TOKEN_KEY = 'sb-polsfpnpvbeqnypcctjy-auth-token';
 
-  var STRIPE_MODE = 'test'; // 'test' = Stripe Sandbox, 'live' = real money
+  var STRIPE_MODE = 'live'; // 'test' = Stripe Sandbox, 'live' = real money
 
   var LINKS = {
     test: {
